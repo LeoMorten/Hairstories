@@ -1,0 +1,8 @@
+# Referenz-Screenshots (nicht Teil der Website)
+IMG_*.PNG
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/

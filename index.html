@@ -9,7 +9,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -29,7 +29,6 @@
       <ul class="nav__links" id="navLinks">
         <li><a href="#ueber-mich">Über mich</a></li>
         <li><a href="#leistungen">Leistungen</a></li>
-        <li><a href="#preise">Preise</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
         <!-- Nur im Mobile-Menü sichtbar -->
         <li class="nav__cta-mobile">
@@ -37,7 +36,7 @@
         </li>
       </ul>
 
-      <a href="#kontakt" class="btn btn--primary nav__cta">Termin anfragen</a>
+      <a href="#kontakt" class="btn btn--cream nav__cta">Termin anfragen</a>
 
       <button class="nav__hamburger" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks">
         <span></span>
@@ -54,29 +53,27 @@
        ============================================= -->
   <section class="hero" id="hero">
 
-    <div class="hero__content">
-      <p class="hero__eyebrow">Forst an der Weinstraße</p>
-
-      <h1 class="hero__headline">
-        Deine<br>Haare.
-      </h1>
-
-      <p class="hero__sub">
-        Natürliche Colorationen &amp; Strähnentechniken –
-        typgerecht &amp; mit Liebe zum Detail.
-      </p>
-
-      <div class="hero__actions">
-        <a href="#kontakt" class="btn btn--primary">Termin anfragen</a>
-        <a href="#leistungen" class="btn btn--ghost">Leistungen</a>
-      </div>
-    </div>
-
-    <div class="hero__image">
+    <div class="hero__bg">
       <img
-        src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80"
+        src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1400&q=80"
         alt="Frau mit blondem Haar"
       >
+    </div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow">Friseursalon · Forst an der Weinstraße</p>
+
+      <h1 class="hero__headline">
+        Deine<br><em>Haare.</em>
+      </h1>
+
+      <div class="hero__footer">
+        <p class="hero__sub">
+          Natürliche Colorationen &amp; Strähnentechniken –
+          typgerecht &amp; mit Liebe zum Detail.
+        </p>
+        <a href="#kontakt" class="btn btn--cream">Termin anfragen</a>
+      </div>
     </div>
 
   </section>
@@ -152,135 +149,100 @@
   <section class="services section" id="leistungen">
     <div class="container">
       <div class="section__header">
-        <span class="section__label">Leistungen</span>
+        <span class="section__label">Leistungen &amp; Preise</span>
         <h2 class="section__title">Was ich für dich tue</h2>
       </div>
     </div>
 
-    <div class="container">
-      <div class="services__grid">
+    <div class="services__grid">
 
-        <article class="service-card">
-          <span class="service-card__num">01</span>
-          <h3 class="service-card__title">Haarschnitt</h3>
-          <p class="service-card__text">
-            Von der präzisen Stufung bis zum klassischen Bob –
-            jeder Schnitt wird auf dein Gesicht, deinen Typ und
-            deinen Alltag abgestimmt.
-          </p>
-        </article>
-
-        <article class="service-card">
-          <span class="service-card__num">02</span>
-          <h3 class="service-card__title">Coloration</h3>
-          <p class="service-card__text">
-            Natürliche Töne, lebendige Farben oder dezente
-            Auffrischung – ich finde die Farbe, die wirklich
-            zu dir passt.
-          </p>
-        </article>
-
-        <article class="service-card">
-          <span class="service-card__num">03</span>
-          <h3 class="service-card__title">Balayage &amp; Strähnentechniken</h3>
-          <p class="service-card__text">
-            Meine absolute Leidenschaft: Natürliche Lichter
-            und Strähnentechniken, die aussehen, als wärst du
-            gerade aus dem Urlaub zurück.
-          </p>
-        </article>
-
-        <article class="service-card">
-          <span class="service-card__num">04</span>
-          <h3 class="service-card__title">Beratung &amp; Styling</h3>
-          <p class="service-card__text">
-            Eine ehrliche Beratung ist genauso wichtig wie
-            die Behandlung selbst. Ich nehme mir Zeit für
-            deine Wünsche und Fragen.
-          </p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- =============================================
-       PREISE
-       ============================================= -->
-  <section class="prices section" id="preise">
-    <div class="container">
-
-      <div class="section__header">
-        <span class="section__label">Preise</span>
-        <h2 class="section__title">Orientierung &amp; Richtwerte</h2>
-        <p class="section__intro">
-          Die genauen Preise richten sich nach Haarlänge, Dichte und Zeitaufwand.
-          Gerne berate ich dich persönlich.
+      <article class="service-card">
+        <span class="service-card__num">01</span>
+        <h3 class="service-card__title">Haarschnitt</h3>
+        <p class="service-card__text">
+          Von der präzisen Stufung bis zum klassischen Bob –
+          jeder Schnitt wird auf deinen Typ und deinen Alltag abgestimmt.
         </p>
-      </div>
+        <ul class="service-card__prices">
+          <li>
+            <span class="service-price__name">Damenschnitt inkl. Föhnen</span>
+            <span class="service-price__amount">ab 45 €</span>
+          </li>
+          <li>
+            <span class="service-price__name">Herrenschnitt</span>
+            <span class="service-price__amount">ab 30 €</span>
+          </li>
+          <li>
+            <span class="service-price__name">Kinderschnitt</span>
+            <span class="service-price__amount">ab 20 €</span>
+          </li>
+          <li>
+            <span class="service-price__name">Nachschnitt (ohne Waschen)</span>
+            <span class="service-price__amount">ab 25 €</span>
+          </li>
+        </ul>
+      </article>
 
-      <div class="prices__grid">
+      <article class="service-card">
+        <span class="service-card__num">02</span>
+        <h3 class="service-card__title">Coloration</h3>
+        <p class="service-card__text">
+          Natürliche Töne, lebendige Farben oder dezente Auffrischung –
+          ich finde die Farbe, die wirklich zu dir passt.
+        </p>
+        <ul class="service-card__prices">
+          <li>
+            <span class="service-price__name">Coloration (komplett)</span>
+            <span class="service-price__amount">ab 80 €</span>
+          </li>
+          <li>
+            <span class="service-price__name">Ansatz färben</span>
+            <span class="service-price__amount">ab 55 €</span>
+          </li>
+        </ul>
+      </article>
 
-        <!-- Schnitte -->
-        <div>
-          <p class="prices__category-title">Schnitte</p>
+      <article class="service-card">
+        <span class="service-card__num">03</span>
+        <h3 class="service-card__title">Balayage &amp; Strähnentechniken</h3>
+        <p class="service-card__text">
+          Meine absolute Leidenschaft: natürliche Lichter, die aussehen,
+          als wärst du gerade aus dem Urlaub zurück.
+        </p>
+        <ul class="service-card__prices">
+          <li>
+            <span class="service-price__name">Balayage &amp; Strähnentechniken</span>
+            <span class="service-price__amount">ab 120 €</span>
+          </li>
+          <li>
+            <span class="service-price__name">Haarpflege-Behandlung</span>
+            <span class="service-price__amount">ab 35 €</span>
+          </li>
+        </ul>
+      </article>
 
-          <div class="price-row">
-            <span class="price-row__name">Damenschnitt inkl. Föhnen</span>
-            <span class="price-row__dots" aria-hidden="true"></span>
-            <span class="price-row__price">ab 45 €</span>
-          </div>
-          <div class="price-row">
-            <span class="price-row__name">Herrenschnitt</span>
-            <span class="price-row__dots" aria-hidden="true"></span>
-            <span class="price-row__price">ab 30 €</span>
-          </div>
-          <div class="price-row">
-            <span class="price-row__name">Kinderschnitt</span>
-            <span class="price-row__dots" aria-hidden="true"></span>
-            <span class="price-row__price">ab 20 €</span>
-          </div>
-          <div class="price-row">
-            <span class="price-row__name">Nachschnitt (ohne Waschen)</span>
-            <span class="price-row__dots" aria-hidden="true"></span>
-            <span class="price-row__price">ab 25 €</span>
-          </div>
-        </div>
+      <article class="service-card">
+        <span class="service-card__num">04</span>
+        <h3 class="service-card__title">Beratung &amp; Styling</h3>
+        <p class="service-card__text">
+          Eine ehrliche Beratung ist genauso wichtig wie die Behandlung.
+          Ich nehme mir Zeit für deine Wünsche und Fragen.
+        </p>
+        <ul class="service-card__prices">
+          <li>
+            <span class="service-price__name">Styling &amp; Hochsteckfrisur</span>
+            <span class="service-price__amount">auf Anfrage</span>
+          </li>
+        </ul>
+      </article>
 
-        <!-- Farbe -->
-        <div>
-          <p class="prices__category-title">Farbe &amp; Techniken</p>
+    </div>
 
-          <div class="price-row">
-            <span class="price-row__name">Coloration (komplett)</span>
-            <span class="price-row__dots" aria-hidden="true"></span>
-            <span class="price-row__price">ab 80 €</span>
-          </div>
-          <div class="price-row">
-            <span class="price-row__name">Ansatz färben</span>
-            <span class="price-row__dots" aria-hidden="true"></span>
-            <span class="price-row__price">ab 55 €</span>
-          </div>
-          <div class="price-row">
-            <span class="price-row__name">Balayage &amp; Strähnentechniken</span>
-            <span class="price-row__dots" aria-hidden="true"></span>
-            <span class="price-row__price">ab 120 €</span>
-          </div>
-          <div class="price-row">
-            <span class="price-row__name">Haarpflege-Behandlung</span>
-            <span class="price-row__dots" aria-hidden="true"></span>
-            <span class="price-row__price">ab 35 €</span>
-          </div>
-        </div>
-
-      </div>
-
-      <p class="prices__note">
-        Aktuelle Preise gelten laut Preisliste im Salon. Alle Preise verstehen sich
-        inklusive der gesetzlichen Mehrwertsteuer. Bezahlung bar oder per Kartenzahlung.
+    <div class="container">
+      <p class="services__note">
+        Preise richten sich nach Haarlänge, Dichte &amp; Zeitaufwand.
+        Aktuelle Preisliste im Salon. Bezahlung bar oder per Karte.
       </p>
-
     </div>
   </section>
 

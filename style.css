@@ -9,8 +9,8 @@
 
 :root {
   --color-bg:         #f9f5f0;
-  --color-bg-warm:    #f0e9df;
-  --color-bg-section: #ede6db;
+  --color-bg-warm:    #c8bdb0;
+  --color-bg-section: #b8ada0;
   --color-bg-dark:    #0d0a08;
   --color-text:       #1a1410;
   --color-text-muted: #7a7068;
@@ -504,47 +504,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   animation: fadeUp 0.9s 1.4s forwards;
 }
 
-.hero__scroll {
-  position: absolute;
-  bottom: 2.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.6rem;
-  opacity: 0;
-  animation: fadeUp 0.9s 1.6s forwards;
-}
-.hero__scroll span {
-  font-family: var(--font-body);
-  font-size: 0.58rem;
-  letter-spacing: 0.4em;
-  text-transform: uppercase;
-  color: rgba(196,168,76,0.5);
-}
-.hero__scroll-dot {
-  width: 1px;
-  height: 40px;
-  background: rgba(196,168,76,0.15);
-  position: relative;
-  overflow: hidden;
-}
-.hero__scroll-dot::after {
-  content: '';
-  position: absolute;
-  top: -100%; left: 0;
-  width: 100%; height: 100%;
-  background: var(--color-accent);
-  animation: scrollDot 1.8s 1.8s infinite;
-}
-
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(22px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 @keyframes expandRule { to { width: 80px; } }
-@keyframes scrollDot { to { top: 200%; } }
 
 
 /* =============================================
@@ -628,7 +592,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .service-card {
-  background-color: var(--color-bg-warm);
+  background-color: var(--color-bg);
   padding: clamp(2rem, 5vw, 3rem);
   position: relative;
   overflow: hidden;
@@ -642,7 +606,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   background: var(--color-accent);
   transition: width 0.5s;
 }
-.service-card:hover { background-color: var(--color-bg-section); }
+.service-card:hover { background-color: var(--color-bg-warm); }
 .service-card:hover::after { width: 100%; }
 
 .service-card__num {
@@ -659,6 +623,22 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transition: color 0.4s;
 }
 .service-card:hover .service-card__num { color: rgba(196,168,76,0.08); }
+
+.service-card__photo {
+  width: calc(100% + clamp(4rem, 10vw, 6rem));
+  margin-left: calc(-1 * clamp(2rem, 5vw, 3rem));
+  margin-top: calc(-1 * clamp(2rem, 5vw, 3rem));
+  margin-bottom: 1.75rem;
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
+}
+.service-card__photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.55s ease;
+}
+.service-card:hover .service-card__photo img { transform: scale(1.04); }
 
 .service-card__title {
   font-family: var(--font-display);
@@ -784,6 +764,26 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   line-height: 1.75;
 }
 .contact__block-value strong { color: var(--color-cream); font-weight: 400; font-style: normal; }
+
+.contact__hours {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+.contact__hours li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: rgba(249,245,240,0.6);
+  border-bottom: 1px solid rgba(196,168,76,0.08);
+  padding-bottom: 0.4rem;
+}
+.contact__hours li:last-child { border-bottom: none; }
 
 .contact__actions { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.75rem; }
 

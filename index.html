@@ -9,7 +9,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -21,31 +21,45 @@
   <nav class="nav" id="nav">
     <div class="nav__inner">
 
+      <!-- Links: Hamburger (mobile) / Nav-Links (desktop) -->
+      <div class="nav__left">
+        <button class="nav__hamburger" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="#ueber-mich">Über mich</a></li>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <!-- Mitte: Logo -->
       <a href="#hero" class="nav__logo">
         <span>Hair</span>
         <span>Stories</span>
       </a>
 
-      <ul class="nav__links" id="navLinks">
-        <li><a href="#ueber-mich">Über mich</a></li>
-        <li><a href="#leistungen">Leistungen</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-        <!-- Nur im Mobile-Menü sichtbar -->
-        <li class="nav__cta-mobile">
-          <a href="#kontakt" class="btn btn--primary">Termin anfragen</a>
-        </li>
-      </ul>
-
-      <a href="#kontakt" class="btn btn--cream nav__cta">Termin anfragen</a>
-
-      <button class="nav__hamburger" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <!-- Rechts: CTA -->
+      <div class="nav__right">
+        <a href="#kontakt" class="btn btn--cream nav__cta">Termin vereinbaren</a>
+      </div>
 
     </div>
   </nav>
+
+  <!-- Fullscreen Overlay-Menü (mobile) -->
+  <div class="nav__overlay" id="navOverlay">
+    <div class="nav__overlay-logo">
+      <span>Hair</span>
+      <span>Stories</span>
+    </div>
+    <a href="#ueber-mich" id="ol-ueber">Über mich</a>
+    <a href="#leistungen" id="ol-leistungen">Leistungen</a>
+    <a href="#galerie" id="ol-galerie">Galerie</a>
+    <a href="#kontakt" id="ol-kontakt">Kontakt</a>
+    <div class="nav__overlay-footer">Im Elster 2 &nbsp;·&nbsp; 67147 Forst an der Weinstraße</div>
+  </div>
 
 
   <!-- =============================================
@@ -63,17 +77,31 @@
     <div class="hero__content">
       <p class="hero__eyebrow">Friseursalon · Forst an der Weinstraße</p>
 
+      <div class="hero__rule"></div>
+
       <h1 class="hero__headline">
-        Deine<br><em>Haare.</em>
+        Deine Haare,<br><em>Deine Geschichte.</em>
       </h1>
 
-      <div class="hero__footer">
-        <p class="hero__sub">
-          Natürliche Colorationen &amp; Strähnentechniken –
-          typgerecht &amp; mit Liebe zum Detail.
-        </p>
-        <a href="#kontakt" class="btn btn--cream">Termin anfragen</a>
+      <div class="hero__rule"></div>
+
+      <p class="hero__sub">
+        Natürliche Colorationen &amp; Strähnentechniken –
+        typgerecht &amp; mit Liebe zum Detail.
+      </p>
+
+      <div class="hero__signature">
+        <span>Sandra Dech &nbsp;·&nbsp; Friseurmeisterin</span>
       </div>
+
+      <div class="hero__cta">
+        <a href="#ueber-mich" class="btn btn--gold">Termin vereinbaren</a>
+      </div>
+    </div>
+
+    <div class="hero__scroll">
+      <span>Entdecken</span>
+      <div class="hero__scroll-dot"></div>
     </div>
 
   </section>
@@ -99,6 +127,7 @@
         <!-- Text -->
         <div class="about__text-col">
           <span class="section__label">Über mich</span>
+          <div class="section__rule"></div>
 
           <blockquote class="about__quote">
             „Perfekte Colorationen – natürlich, typgerecht &amp; mit viel Liebe zum Detail."
@@ -151,6 +180,7 @@
       <div class="section__header">
         <span class="section__label">Leistungen &amp; Preise</span>
         <h2 class="section__title">Was ich für dich tue</h2>
+        <div class="section__rule"></div>
       </div>
     </div>
 
@@ -256,6 +286,7 @@
       <div class="section__header">
         <span class="section__label">Galerie</span>
         <h2 class="section__title">Arbeiten &amp; Ergebnisse</h2>
+        <div class="section__rule"></div>
       </div>
 
       <div class="gallery__grid">
@@ -297,7 +328,8 @@
 
       <div class="section__header">
         <span class="section__label">Kontakt</span>
-        <h2 class="section__title">Termin anfragen</h2>
+        <h2 class="section__title">Termin vereinbaren</h2>
+        <div class="section__rule"></div>
         <p class="section__intro" style="color: rgba(254,252,250,0.65);">
           Ich freue mich auf dich. Melde dich gerne telefonisch oder per WhatsApp –
           ich melde mich schnellstmöglich zurück.

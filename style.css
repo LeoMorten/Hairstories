@@ -301,17 +301,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .nav__hamburger {
   display: flex; flex-direction: column; justify-content: center;
-  gap: 6px; width: 36px; height: 36px; padding: 4px;
+  gap: 7px; width: 44px; height: 44px; padding: 4px;
 }
 .nav__hamburger span {
-  display: block; height: 1px;
+  display: block; height: 1.5px;
   background-color: var(--color-text);
   transition: transform var(--transition), opacity var(--transition), background-color var(--transition);
   transform-origin: center;
 }
-.nav__hamburger.is-active span:nth-child(1) { transform: translateY(7px) rotate(45deg); background-color: var(--color-accent); }
+.nav__hamburger.is-active span:nth-child(1) { transform: translateY(8.5px) rotate(45deg); background-color: var(--color-accent); }
 .nav__hamburger.is-active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-.nav__hamburger.is-active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); background-color: var(--color-accent); }
+.nav__hamburger.is-active span:nth-child(3) { transform: translateY(-8.5px) rotate(-45deg); background-color: var(--color-accent); }
 
 /* Full-screen overlay mobile nav */
 .nav__overlay {
@@ -670,12 +670,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   gap: 1rem;
   padding: 0.55rem 0;
   border-bottom: 1px solid rgba(26,20,16,0.15);
-  font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
 }
 .service-card__prices li:last-child { border-bottom: none; }
-.service-price__name { color: var(--color-text); font-weight: 400; }
-.service-price__amount { font-weight: 600; color: var(--color-text); white-space: nowrap; }
+.service-price__name { color: var(--color-text); font-weight: 300; }
+.service-price__amount { font-weight: 400; font-style: normal; color: var(--color-text); white-space: nowrap; }
 
 .services__note {
   margin-top: 2rem;

@@ -8,15 +8,15 @@
    ============================================= */
 
 :root {
-  --color-bg:         #f9f5f0;
-  --color-bg-warm:    #c8bdb0;
-  --color-bg-section: #b8ada0;
+  --color-bg:         #e8dfd4;
+  --color-bg-warm:    #e8dfd4;
+  --color-bg-section: #e8dfd4;
   --color-bg-dark:    #0d0a08;
   --color-text:       #1a1410;
   --color-text-muted: #7a7068;
   --color-accent:     #c4a84c;
   --color-accent-dim: rgba(196,168,76,0.18);
-  --color-cream:      #f9f5f0;
+  --color-cream:      #f5f0ea;
   --color-border:     #e2dbd1;
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
@@ -743,8 +743,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    10. KONTAKT
    ============================================= */
 
-.contact { background-color: var(--color-bg-dark); }
-.contact .section__title { color: var(--color-cream); }
+.contact { background-color: var(--color-bg); }
 
 .contact__grid { display: grid; gap: clamp(2.5rem, 6vw, 4rem); }
 
@@ -758,12 +757,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--color-accent); margin-bottom: 0.75rem;
 }
 .contact__block-value {
-  color: rgba(249,245,240,0.65);
+  color: var(--color-text-muted);
   font-size: 1.05rem; font-weight: 300;
   font-style: italic;
   line-height: 1.75;
 }
-.contact__block-value strong { color: var(--color-cream); font-weight: 400; font-style: normal; }
+.contact__block-value strong { color: var(--color-text); font-weight: 400; font-style: normal; }
 
 .contact__hours {
   list-style: none;
@@ -779,8 +778,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-family: var(--font-body);
   font-size: 0.82rem;
   font-weight: 300;
-  color: rgba(249,245,240,0.6);
-  border-bottom: 1px solid rgba(196,168,76,0.08);
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
   padding-bottom: 0.4rem;
 }
 .contact__hours li:last-child { border-bottom: none; }
@@ -789,12 +788,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .contact__map {
   min-height: 300px; overflow: hidden;
-  background-color: rgba(255,255,255,0.04);
-  border: 1px solid rgba(196,168,76,0.12);
+  background-color: var(--color-border);
+  border: 1px solid var(--color-border);
 }
 .contact__map iframe {
   width: 100%; height: 100%; min-height: 300px; border: 0;
-  filter: grayscale(60%) brightness(0.8) contrast(0.9);
+  filter: grayscale(40%) brightness(0.95) contrast(0.95);
 }
 
 @media (min-width: 768px) {
